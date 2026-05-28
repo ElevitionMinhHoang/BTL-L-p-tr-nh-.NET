@@ -1,11 +1,13 @@
+using System.Collections.Generic;
+
 namespace LibraryManagement.DAL.Repositories
 {
     public interface IRepository<T> where T : class
     {
         IEnumerable<T> GetAll();
-        T GetById(object id);
-        void Add(T entity);
-        void Update(T entity);
-        void Delete(object id);
+        T GetById(int id);
+        int Add(T entity);
+        bool Update(T entity);
+        bool Delete(int id);
     }
 }

@@ -1,7 +1,18 @@
+using System.Configuration;
+using System.Data.SqlClient;
+
 namespace LibraryManagement.DAL
 {
     public static class ConnectionHelper
     {
-        // Quản lý chuỗi kết nối
+        public static string GetConnectionString()
+        {
+            return ConfigurationManager.ConnectionStrings["LibraryDB"].ConnectionString;
+        }
+
+        public static SqlConnection GetConnection()
+        {
+            return new SqlConnection(GetConnectionString());
+        }
     }
 }

@@ -5,14 +5,18 @@ GO
 
 -- 1. Bảng TaiKhoan
 CREATE TABLE TaiKhoan (
-    MaTK        NVARCHAR(50) PRIMARY KEY,
+    MaTK        INT IDENTITY(1,1) PRIMARY KEY,
     TenDangNhap NVARCHAR(50) NOT NULL UNIQUE,
     MatKhauHash NVARCHAR(255) NOT NULL,
-    Salt        NVARCHAR(100) NOT NULL,
-    Role        NVARCHAR(20) NOT NULL  -- 'Admin' | 'ThuThu' | 'DocGia'
+    HoTen       NVARCHAR(100) NOT NULL,
+    Role        NVARCHAR(20) NOT NULL, -- 'Admin' | 'ThuThu' | 'BanDoc'
+    Email       NVARCHAR(100),
+    SoDienThoai NVARCHAR(15),
+    NgayTao     DATETIME DEFAULT GETDATE(),
+    IsActive    BIT DEFAULT 1
 );
 
--- 2. Bảng DanhMuc (dùng chung cho TheLoa/NXB/TacGia)
+-- 2. Bảng DanhMuc (dùng chung cho TheLoai/NXB/TacGia)
 CREATE TABLE DanhMuc (
     MaDanhMuc   NVARCHAR(50) PRIMARY KEY,
     TenDanhMuc  NVARCHAR(100) NOT NULL,
@@ -36,7 +40,7 @@ CREATE TABLE DocGia (
     SDT         NVARCHAR(15),
     Email       NVARCHAR(100),
     NgayCap     DATE DEFAULT GETDATE(),
-    MaTK        NVARCHAR(50) REFERENCES TaiKhoan(MaTK)
+    MaTK        INT REFERENCES TaiKhoan(MaTK)
 );
 
 -- 5. Bảng PhieuMuon
