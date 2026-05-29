@@ -6,8 +6,6 @@ using LibraryManagement.BLL;
 using LibraryManagement.Models.DTOs;
 using LibraryManagement.GUI.Forms.Auth;
 
-using System.Windows.Forms;
-
 namespace LibraryManagement.GUI.Forms.Admin
 {
     public partial class frmQuanLyTaiKhoan : Form
@@ -57,7 +55,7 @@ namespace LibraryManagement.GUI.Forms.Admin
             {
                 TenDangNhap = txtTenDangNhap.Text.Trim(),
                 HoTen = txtHoTen.Text.Trim(),
-                Role = cboRoleChiTiet.SelectedItem?.ToString() ?? "NhanVien",
+                Role = cboRoleChiTiet.SelectedItem?.ToString() ?? "ThuThu",
                 Email = txtEmail.Text.Trim(),
                 SoDienThoai = txtSdt.Text.Trim(),
                 IsActive = chkActive.Checked
@@ -86,6 +84,17 @@ namespace LibraryManagement.GUI.Forms.Admin
             {
                 MessageBox.Show(error);
             }
+        }
+
+        private void btnResetMK_Click(object sender, EventArgs e)
+        {
+            if (dgvTaiKhoan.CurrentRow == null) return;
+            int id = (int)dgvTaiKhoan.CurrentRow.Cells["MaTK"].Value;
+            if (id == UserSession.Current.MaTK) { MessageBox.Show("Không reset chính mình!"); return; }
+            string mk = Microsoft.VisualBasic.Interaction.InputBox("Mật khẩu mới (≥6 ký tự):", "Reset mật khẩu");
+            if (string.IsNullOrWhiteSpace(mk)) return;
+            string err = _bll.ResetPassword(id, mk);
+            MessageBox.Show(err ?? "Reset thành công!");
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

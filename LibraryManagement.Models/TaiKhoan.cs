@@ -12,25 +12,25 @@ namespace LibraryManagement.Models
 
         [Required]
         [StringLength(50)]
-        public string TenDangNhap { get; set; }
+        public string TenDangNhap { get; set; } = string.Empty;
 
         [Required]
         [StringLength(255)]
-        public string MatKhauHash { get; set; }
+        public string MatKhauHash { get; set; } = string.Empty;
 
         [Required]
         [StringLength(100)]
-        public string HoTen { get; set; }
+        public string HoTen { get; set; } = string.Empty;
 
         [Required]
         [StringLength(20)]
-        public string Role { get; set; }
+        public string Role { get; set; } = string.Empty;
 
         [StringLength(100)]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [StringLength(15)]
-        public string SoDienThoai { get; set; }
+        public string? SoDienThoai { get; set; }
 
         public DateTime NgayTao { get; set; } = DateTime.Now;
 
