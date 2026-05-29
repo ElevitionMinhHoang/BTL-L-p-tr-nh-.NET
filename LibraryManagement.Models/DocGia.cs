@@ -9,5 +9,6 @@ namespace LibraryManagement.Models
         public string? SDT { get; set; }
         public string? Email { get; set; }
         public DateTime NgayCap { get; set; }
+        public int? MaTK { get; set; }
     }
 }

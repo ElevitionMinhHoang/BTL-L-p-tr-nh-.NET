@@ -1,22 +1,24 @@
 -- ============================================================
 -- 1. BẢNG TaiKhoan 
 -- ============================================================
-INSERT INTO TaiKhoan (MaTK, TenDangNhap, MatKhauHash, Salt, Role) VALUES
-('TK001', 'admin',       '$2a$11$placeholder_admin_hash_here',     'salt_admin',     'Admin'),
-('TK002', 'thuthu1',     '$2a$11$placeholder_tt1_hash_here',       'salt_tt1',       'ThuThu'),
-('TK003', 'thuthu2',     '$2a$11$placeholder_tt2_hash_here',       'salt_tt2',       'ThuThu'),
-('TK004', 'docgia001',   '$2a$11$placeholder_dg001_hash_here',     'salt_dg001',     'DocGia'),
-('TK005', 'docgia002',   '$2a$11$placeholder_dg002_hash_here',     'salt_dg002',     'DocGia'),
-('TK006', 'docgia003',   '$2a$11$placeholder_dg003_hash_here',     'salt_dg003',     'DocGia'),
-('TK007', 'docgia004',   '$2a$11$placeholder_dg004_hash_here',     'salt_dg004',     'DocGia'),
-('TK008', 'docgia005',   '$2a$11$placeholder_dg005_hash_here',     'salt_dg005',     'DocGia'),
-('TK009', 'docgia006',   '$2a$11$placeholder_dg006_hash_here',     'salt_dg006',     'DocGia'),
-('TK010', 'docgia007',   '$2a$11$placeholder_dg007_hash_here',     'salt_dg007',     'DocGia'),
-('TK011', 'docgia008',   '$2a$11$placeholder_dg008_hash_here',     'salt_dg008',     'DocGia'),
-('TK012', 'docgia009',   '$2a$11$placeholder_dg009_hash_here',     'salt_dg009',     'DocGia'),
-('TK013', 'docgia010',   '$2a$11$placeholder_dg010_hash_here',     'salt_dg010',     'DocGia'),
-('TK014', 'thuthu3',     '$2a$11$placeholder_tt3_hash_here',       'salt_tt3',       'ThuThu'),
-('TK015', 'manager',     '$2a$11$placeholder_manager_hash_here',   'salt_manager',   'Admin');
+SET IDENTITY_INSERT TaiKhoan ON;
+INSERT INTO TaiKhoan (MaTK, TenDangNhap, MatKhauHash, HoTen, Role) VALUES
+(1, 'admin',       '$2a$11$12345678901234567890123456789012345678901234567890123', N'Quản trị viên',   'Admin'),
+(2, 'thuthu1',     '$2a$11$12345678901234567890123456789012345678901234567890123', N'Thủ thư 1',       'ThuThu'),
+(3, 'thuthu2',     '$2a$11$12345678901234567890123456789012345678901234567890123', N'Thủ thư 2',       'ThuThu'),
+(4, 'docgia001',   '$2a$11$12345678901234567890123456789012345678901234567890123', N'Nguyễn Văn An',   'BanDoc'),
+(5, 'docgia002',   '$2a$11$12345678901234567890123456789012345678901234567890123', N'Trần Thị Bình',   'BanDoc'),
+(6, 'docgia003',   '$2a$11$12345678901234567890123456789012345678901234567890123', N'Lê Minh Châu',    'BanDoc'),
+(7, 'docgia004',   '$2a$11$12345678901234567890123456789012345678901234567890123', N'Phạm Thị Dung',   'BanDoc'),
+(8, 'docgia005',   '$2a$11$12345678901234567890123456789012345678901234567890123', N'Hoàng Văn Em',    'BanDoc'),
+(9, 'docgia006',   '$2a$11$12345678901234567890123456789012345678901234567890123', N'Ngô Thị Phương',  'BanDoc'),
+(10, 'docgia007',  '$2a$11$12345678901234567890123456789012345678901234567890123', N'Vũ Đức Giang',    'BanDoc'),
+(11, 'docgia008',  '$2a$11$12345678901234567890123456789012345678901234567890123', N'Đinh Thị Hương',  'BanDoc'),
+(12, 'docgia009',  '$2a$11$12345678901234567890123456789012345678901234567890123', N'Bùi Quang Huy',   'BanDoc'),
+(13, 'docgia010',  '$2a$11$12345678901234567890123456789012345678901234567890123', N'Đặng Minh Khánh', 'BanDoc'),
+(14, 'thuthu3',     '$2a$11$12345678901234567890123456789012345678901234567890123', N'Thủ thư 3',       'ThuThu'),
+(15, 'manager',     '$2a$11$12345678901234567890123456789012345678901234567890123', N'Quản lý hệ thống', 'Admin');
+SET IDENTITY_INSERT TaiKhoan OFF;
 GO
 
 -- ============================================================
@@ -82,16 +84,16 @@ GO
 -- 4. BẢNG DocGia 
 -- ============================================================
 INSERT INTO DocGia (MaDocGia, HoTen, SDT, Email, NgayCap, MaTK) VALUES
-('DG001', N'Nguyễn Văn An', '0901111111', 'an@gmail.com', '2024-01-10', 'TK004'),
-('DG002', N'Trần Thị Bình', '0902222222', 'binh@gmail.com', '2024-01-15', 'TK005'),
-('DG003', N'Lê Minh Châu', '0903333333', 'chau@gmail.com', '2024-02-01', 'TK006'),
-('DG004', N'Phạm Thị Dung', '0904444444', 'dung@gmail.com', '2024-02-14', 'TK007'),
-('DG005', N'Hoàng Văn Em', '0905555555', 'em@gmail.com', '2024-03-05', 'TK008'),
-('DG006', N'Ngô Thị Phương', '0906666666', 'phuong@gmail.com', '2024-03-20', 'TK009'),
-('DG007', N'Vũ Đức Giang', '0907777777', 'giang@gmail.com', '2024-04-01', 'TK010'),
-('DG008', N'Đinh Thị Hương', '0908888888', 'huong@gmail.com', '2024-04-10', 'TK011'),
-('DG009', N'Bùi Quang Huy', '0909999999', 'huy@gmail.com', '2024-05-01', 'TK012'),
-('DG010', N'Đặng Minh Khánh', '0910101010', 'khanh@gmail.com', '2024-05-15', 'TK013'),
+('DG001', N'Nguyễn Văn An', '0901111111', 'an@gmail.com', '2024-01-10', 4),
+('DG002', N'Trần Thị Bình', '0902222222', 'binh@gmail.com', '2024-01-15', 5),
+('DG003', N'Lê Minh Châu', '0903333333', 'chau@gmail.com', '2024-02-01', 6),
+('DG004', N'Phạm Thị Dung', '0904444444', 'dung@gmail.com', '2024-02-14', 7),
+('DG005', N'Hoàng Văn Em', '0905555555', 'em@gmail.com', '2024-03-05', 8),
+('DG006', N'Ngô Thị Phương', '0906666666', 'phuong@gmail.com', '2024-03-20', 9),
+('DG007', N'Vũ Đức Giang', '0907777777', 'giang@gmail.com', '2024-04-01', 10),
+('DG008', N'Đinh Thị Hương', '0908888888', 'huong@gmail.com', '2024-04-10', 11),
+('DG009', N'Bùi Quang Huy', '0909999999', 'huy@gmail.com', '2024-05-01', 12),
+('DG010', N'Đặng Minh Khánh', '0910101010', 'khanh@gmail.com', '2024-05-15', 13),
 ('DG011', N'Lưu Hải Nam', '0911111111', 'nam@gmail.com', '2024-06-01', NULL),
 ('DG012', N'Tạ Thu Trang', '0912222222', 'trang@gmail.com', '2024-06-10', NULL),
 ('DG013', N'Nguyễn Quốc Việt', '0913333333', 'viet@gmail.com', '2024-06-15', NULL),

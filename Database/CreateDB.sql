@@ -1,3 +1,14 @@
+USE master;
+GO
+
+-- Xóa database nếu đã tồn tại để tạo mới hoàn toàn
+IF EXISTS (SELECT name FROM sys.databases WHERE name = N'LibraryManagement')
+BEGIN
+    ALTER DATABASE LibraryManagement SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE LibraryManagement;
+END
+GO
+
 CREATE DATABASE LibraryManagement;
 GO
 USE LibraryManagement;
