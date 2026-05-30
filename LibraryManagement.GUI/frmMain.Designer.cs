@@ -23,6 +23,8 @@ namespace LibraryManagement.GUI
             this.btnQuanLyTaiKhoan = new System.Windows.Forms.Button();
             this.btnQuanLySach = new System.Windows.Forms.Button();
             this.btnQuanLyDocGia = new System.Windows.Forms.Button();
+            this.btnMuonSach = new System.Windows.Forms.Button();
+            this.btnTraSach = new System.Windows.Forms.Button();
             this.btnMuonTra = new System.Windows.Forms.Button();
             this.btnBaoCao = new System.Windows.Forms.Button();
             this.panelContent = new System.Windows.Forms.Panel();
@@ -81,6 +83,8 @@ namespace LibraryManagement.GUI
             this.panelMenu.Controls.Add(this.btnQuanLyTaiKhoan);
             this.panelMenu.Controls.Add(this.btnQuanLySach);
             this.panelMenu.Controls.Add(this.btnQuanLyDocGia);
+            this.panelMenu.Controls.Add(this.btnMuonSach);
+            this.panelMenu.Controls.Add(this.btnTraSach);
             this.panelMenu.Controls.Add(this.btnMuonTra);
             this.panelMenu.Controls.Add(this.btnBaoCao);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -117,18 +121,39 @@ namespace LibraryManagement.GUI
             this.btnQuanLyDocGia.Text = "Quản lý Độc giả";
             this.btnQuanLyDocGia.UseVisualStyleBackColor = true;
             // 
+            // btnMuonSach
+            // 
+            this.btnMuonSach.Location = new System.Drawing.Point(3, 156);
+            this.btnMuonSach.Name = "btnMuonSach";
+            this.btnMuonSach.Size = new System.Drawing.Size(190, 45);
+            this.btnMuonSach.TabIndex = 5;
+            this.btnMuonSach.Text = "Mượn sách";
+            this.btnMuonSach.UseVisualStyleBackColor = true;
+            this.btnMuonSach.Click += new System.EventHandler(this.btnMuonSach_Click);
+            // 
+            // btnTraSach
+            // 
+            this.btnTraSach.Location = new System.Drawing.Point(3, 207);
+            this.btnTraSach.Name = "btnTraSach";
+            this.btnTraSach.Size = new System.Drawing.Size(190, 45);
+            this.btnTraSach.TabIndex = 6;
+            this.btnTraSach.Text = "Trả sách";
+            this.btnTraSach.UseVisualStyleBackColor = true;
+            this.btnTraSach.Click += new System.EventHandler(this.btnTraSach_Click);
+            // 
             // btnMuonTra
             // 
-            this.btnMuonTra.Location = new System.Drawing.Point(3, 156);
+            this.btnMuonTra.Location = new System.Drawing.Point(3, 258);
             this.btnMuonTra.Name = "btnMuonTra";
             this.btnMuonTra.Size = new System.Drawing.Size(190, 45);
             this.btnMuonTra.TabIndex = 3;
-            this.btnMuonTra.Text = "Mượn - Trả sách";
+            this.btnMuonTra.Text = "Danh sách mượn";
             this.btnMuonTra.UseVisualStyleBackColor = true;
+            this.btnMuonTra.Click += new System.EventHandler(this.btnMuonTra_Click);
             // 
             // btnBaoCao
             // 
-            this.btnBaoCao.Location = new System.Drawing.Point(3, 207);
+            this.btnBaoCao.Location = new System.Drawing.Point(3, 309);
             this.btnBaoCao.Name = "btnBaoCao";
             this.btnBaoCao.Size = new System.Drawing.Size(190, 45);
             this.btnBaoCao.TabIndex = 4;
@@ -169,6 +194,8 @@ namespace LibraryManagement.GUI
         private System.Windows.Forms.Button btnQuanLyTaiKhoan;
         private System.Windows.Forms.Button btnQuanLySach;
         private System.Windows.Forms.Button btnQuanLyDocGia;
+        private System.Windows.Forms.Button btnMuonSach;
+        private System.Windows.Forms.Button btnTraSach;
         private System.Windows.Forms.Button btnMuonTra;
         private System.Windows.Forms.Button btnBaoCao;
         private System.Windows.Forms.Panel panelContent;

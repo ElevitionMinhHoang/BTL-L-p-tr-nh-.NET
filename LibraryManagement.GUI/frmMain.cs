@@ -43,9 +43,33 @@ namespace LibraryManagement.GUI
 
         private void btnQuanLyTaiKhoan_Click(object sender, EventArgs e)
         {
-            // Load child form vào panel hoặc mở form mới
-            var frm = new frmQuanLyTaiKhoan();
+            var frm = new Forms.Admin.frmQuanLyTaiKhoan();
             frm.ShowDialog();
+        }
+
+        private void LoadForm(Form frm)
+        {
+            panelContent.Controls.Clear();
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            panelContent.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void btnMuonTra_Click(object sender, EventArgs e)
+        {
+            // Mặc định mở danh sách mượn
+            LoadForm(new Forms.Borrowing.frmDanhSachMuon());
+        }
+
+        private void btnMuonSach_Click(object sender, EventArgs e)
+        {
+            LoadForm(new Forms.Borrowing.frmMuonSach());
+        }
+
+        private void btnTraSach_Click(object sender, EventArgs e)
+        {
+            LoadForm(new Forms.Borrowing.frmTraSach());
         }
     }
 }

@@ -3,21 +3,21 @@
 -- ============================================================
 SET IDENTITY_INSERT TaiKhoan ON;
 INSERT INTO TaiKhoan (MaTK, TenDangNhap, MatKhauHash, HoTen, Role) VALUES
-(1, 'admin',       '$2a$11$12345678901234567890123456789012345678901234567890123', N'Quản trị viên',   'Admin'),
-(2, 'thuthu1',     '$2a$11$12345678901234567890123456789012345678901234567890123', N'Thủ thư 1',       'ThuThu'),
-(3, 'thuthu2',     '$2a$11$12345678901234567890123456789012345678901234567890123', N'Thủ thư 2',       'ThuThu'),
-(4, 'docgia001',   '$2a$11$12345678901234567890123456789012345678901234567890123', N'Nguyễn Văn An',   'BanDoc'),
-(5, 'docgia002',   '$2a$11$12345678901234567890123456789012345678901234567890123', N'Trần Thị Bình',   'BanDoc'),
-(6, 'docgia003',   '$2a$11$12345678901234567890123456789012345678901234567890123', N'Lê Minh Châu',    'BanDoc'),
-(7, 'docgia004',   '$2a$11$12345678901234567890123456789012345678901234567890123', N'Phạm Thị Dung',   'BanDoc'),
-(8, 'docgia005',   '$2a$11$12345678901234567890123456789012345678901234567890123', N'Hoàng Văn Em',    'BanDoc'),
-(9, 'docgia006',   '$2a$11$12345678901234567890123456789012345678901234567890123', N'Ngô Thị Phương',  'BanDoc'),
-(10, 'docgia007',  '$2a$11$12345678901234567890123456789012345678901234567890123', N'Vũ Đức Giang',    'BanDoc'),
-(11, 'docgia008',  '$2a$11$12345678901234567890123456789012345678901234567890123', N'Đinh Thị Hương',  'BanDoc'),
-(12, 'docgia009',  '$2a$11$12345678901234567890123456789012345678901234567890123', N'Bùi Quang Huy',   'BanDoc'),
-(13, 'docgia010',  '$2a$11$12345678901234567890123456789012345678901234567890123', N'Đặng Minh Khánh', 'BanDoc'),
-(14, 'thuthu3',     '$2a$11$12345678901234567890123456789012345678901234567890123', N'Thủ thư 3',       'ThuThu'),
-(15, 'manager',     '$2a$11$12345678901234567890123456789012345678901234567890123', N'Quản lý hệ thống', 'Admin');
+(1, 'admin',       '$2a$11$mR6JqBW9.N6mS9lJc9kZeunV6M7U/T.UfD2/vP8n5U7j/9W1n/u02', N'Quản trị viên',   'Admin'),
+(2, 'thuthu1',     '$2a$11$mR6JqBW9.N6mS9lJc9kZeunV6M7U/T.UfD2/vP8n5U7j/9W1n/u02', N'Thủ thư 1',       'ThuThu'),
+(3, 'thuthu2',     '$2a$11$mR6JqBW9.N6mS9lJc9kZeunV6M7U/T.UfD2/vP8n5U7j/9W1n/u02', N'Thủ thư 2',       'ThuThu'),
+(4, 'docgia001',   '$2a$11$mR6JqBW9.N6mS9lJc9kZeunV6M7U/T.UfD2/vP8n5U7j/9W1n/u02', N'Nguyễn Văn An',   'BanDoc'),
+(5, 'docgia002',   '$2a$11$mR6JqBW9.N6mS9lJc9kZeunV6M7U/T.UfD2/vP8n5U7j/9W1n/u02', N'Trần Thị Bình',   'BanDoc'),
+(6, 'docgia003',   '$2a$11$mR6JqBW9.N6mS9lJc9kZeunV6M7U/T.UfD2/vP8n5U7j/9W1n/u02', N'Lê Minh Châu',    'BanDoc'),
+(7, 'docgia004',   '$2a$11$mR6JqBW9.N6mS9lJc9kZeunV6M7U/T.UfD2/vP8n5U7j/9W1n/u02', N'Phạm Thị Dung',   'BanDoc'),
+(8, 'docgia005',   '$2a$11$mR6JqBW9.N6mS9lJc9kZeunV6M7U/T.UfD2/vP8n5U7j/9W1n/u02', N'Hoàng Văn Em',    'BanDoc'),
+(9, 'docgia006',   '$2a$11$mR6JqBW9.N6mS9lJc9kZeunV6M7U/T.UfD2/vP8n5U7j/9W1n/u02', N'Ngô Thị Phương',  'BanDoc'),
+(10, 'docgia007',  '$2a$11$mR6JqBW9.N6mS9lJc9kZeunV6M7U/T.UfD2/vP8n5U7j/9W1n/u02', N'Vũ Đức Giang',    'BanDoc'),
+(11, 'docgia008',  '$2a$11$mR6JqBW9.N6mS9lJc9kZeunV6M7U/T.UfD2/vP8n5U7j/9W1n/u02', N'Đinh Thị Hương',  'BanDoc'),
+(12, 'docgia009',  '$2a$11$mR6JqBW9.N6mS9lJc9kZeunV6M7U/T.UfD2/vP8n5U7j/9W1n/u02', N'Bùi Quang Huy',   'BanDoc'),
+(13, 'docgia010',  '$2a$11$mR6JqBW9.N6mS9lJc9kZeunV6M7U/T.UfD2/vP8n5U7j/9W1n/u02', N'Đặng Minh Khánh', 'BanDoc'),
+(14, 'thuthu3',     '$2a$11$mR6JqBW9.N6mS9lJc9kZeunV6M7U/T.UfD2/vP8n5U7j/9W1n/u02', N'Thủ thư 3',       'ThuThu'),
+(15, 'manager',     '$2a$11$mR6JqBW9.N6mS9lJc9kZeunV6M7U/T.UfD2/vP8n5U7j/9W1n/u02', N'Quản lý hệ thống', 'Admin');
 SET IDENTITY_INSERT TaiKhoan OFF;
 GO
 

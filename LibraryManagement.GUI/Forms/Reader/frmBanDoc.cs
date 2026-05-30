@@ -72,8 +72,8 @@ namespace LibraryManagement.GUI.Forms.Reader
 
         private void btnTraCuuSach_Click(object sender, EventArgs e)
         {
-            // Mở form tra cứu sách
-            // new frmTraCuuSach().ShowDialog();
+            var frm = new frmDatMuonOnline();
+            frm.ShowDialog();
         }
 
         private void btnLichSuMuon_Click(object sender, EventArgs e)
